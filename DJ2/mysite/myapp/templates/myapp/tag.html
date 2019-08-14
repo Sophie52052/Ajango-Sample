@@ -1,0 +1,23 @@
+{% load staticfiles %}
+<!-- Instruct Django to load static files -->
+
+
+<html>
+    <head>
+    </head>
+
+<body>
+    <h2>Django template tag</h2>
+    <h3>For Loop : </h3>
+    {% for animal in animals%}
+    <div>{{animal}}</div>
+    {% if animal == 'cat' %}
+    <div>ࡋѺ</div><br>
+    {% elif animal == 'dog' %}
+    <div>෺Ѻ</div><br>
+    {% else %}
+    <div>Pika~Pika</div><br>
+    {% endif %}
+    {% endfor %}
+    </body>
+</html>

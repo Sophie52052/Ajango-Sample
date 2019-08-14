@@ -1,0 +1,14 @@
+{% load staticfiles %}
+<!-- Instruct Django to load static files -->
+
+<html>
+
+<body>
+    <h1>Hello IIR!</h1>
+    <div>My name is {{name}}</div>
+    <div>How I look?</div>
+    <div><img src="{% static 'myapp/img/star.jpg' %}" title="大頭照" width="800px" height="450px"></div>
+    <em>Now is {{ current_time }}</em>
+    </body>
+
+    </html>
