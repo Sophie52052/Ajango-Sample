@@ -1,0 +1,56 @@
+{% load staticfiles %}
+
+<!-- Instruct Django to load static files -->
+
+<html>
+
+<head>
+</head>
+
+<body>
+
+    <form action="/upload/" method="POST">新增歌曲 <br>  
+        {% csrf_token %}
+        歌名:<br>
+        <input type="text"  name="A1" ><br>
+        作者:<br>
+        <input type="text"  name="A2" ><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <form action="/update/" method="POST">修改歌曲 <br>
+        {% csrf_token %}
+        ID:<br>
+        <input type="text" name="ID_update"><br>
+        歌名:<br>
+        <input type="text" name="song_update"><br>
+        作者:<br>
+        <input type="text" name="author_update">
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <form action="/delete/" method="POST">刪除歌曲 <br>
+        {% csrf_token %}
+        ID:<br>
+        <input type="text" name="delete"><br><br>
+        <input type="submit" value="Submit">
+        
+    </form>
+
+    <form action="/interactionKkboxSong/" method="POST">顯示互動 <br>
+        {% csrf_token %}
+        ID:<br>
+        <input type="text" name="ID_interaction"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    
+
+</body>
+
+</html>
+
+
+
+

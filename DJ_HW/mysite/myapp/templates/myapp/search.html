@@ -1,0 +1,68 @@
+<html>
+          
+    <head>
+        <script src="http://code.jquery.com/jquery-2.1.3.js">
+        </script>
+        <script>
+       
+        </script>
+    </head>
+    <body>
+        <!-- JOSN -->
+            <!-- <form action="/searchsong/" method="GET">搜尋 <br>  //POST                              
+                song name:<br>
+                <input type="text" name="name_search" id="search_text1">
+                <input type="submit" value="Submit" id="search_button1">            
+            </form> -->
+
+            song name:<br>
+            <input type="text" name="name_search" id="search_text">
+            <input type="submit" value="Submit" id="search_button">
+
+
+            <table class="table1">
+                <thead ALIGN="left">
+                    <tr>
+                        <th width="33%">Song</th>
+                        <th width="33%">Artist</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>           
+
+
+        
+<!-- ajax请求 -->
+
+<script>
+        $(document).ready(function(){
+          $('#search_button').click(function(){
+              var text = $("#search_text").val();
+              $('table tbody').remove();
+              document.getElementById("search_button").value="Loading"; //#run時button文字
+               
+              
+              $.getJSON('/searchsong/',{"name_search":text},function(data){
+                var tr = data; //data.report從屬
+                for (var i = 0; i < data.length; i++) {
+                    tr = $('<tr/>');
+                    
+                    tr.append("<td>" + data[i].songname + "</td>");
+                    tr.append("<td>" + data[i].artist + "</td>");
+                    $(".table1").append(tr);
+                }
+                document.getElementById("search_button").value="Reset";
+            });
+        });
+    });
+
+
+        
+    </script>
+   
+    </body>
+
+
+</html>
