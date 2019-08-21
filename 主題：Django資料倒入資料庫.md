@@ -1,4 +1,4 @@
-# 主題：Django資料倒入資料庫
+# 主題：Django資料倒入資料庫 講者：煌鑌, 怡瑄, 崇堯
 ###### tags: `Django` `Database` `DOS`
 * cmd
 
@@ -77,3 +77,7 @@ C:\xampp\mysql\bin>mysql -u root --default-character-set=utf8 test < kkbox_rs_20
 ```
 mysql -u root --default-character-set=utf8 test < kkbox_rs_2019-07-05_userlike_record.sql
 ```
+
+> https://drive.google.com/drive/u/1/folders/17gWrSbHey1_M4r05u7xw-Wj8afoNDS4W
+
+> https://charlychiu.github.io/presentation/NCKU-CSIE-IIR-Summer-Course/index.html#/
